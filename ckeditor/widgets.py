@@ -71,9 +71,9 @@ class CKEditorWidget(forms.Textarea):
             value = ''
         final_attrs = self.build_attrs(attrs, name=name)
         
-        self.config['filebrowserUploadUrl'] = reverse(self.config['filebrowserUploadPatternName']) + self.config['filebrowserUploadParams']
+        self.config.setdefault('filebrowserUploadUrl', reverse(self.config['filebrowserUploadPatternName']) + self.config['filebrowserUploadParams'])
         
-        self.config['filebrowserBrowseUrl'] = reverse(self.config['filebrowserBrowsePatternName']) + self.config['filebrowserBrowseParams']
+        self.config.setdefault('filebrowserBrowseUrl', reverse(self.config['filebrowserBrowsePatternName']) + self.config['filebrowserBrowseParams'])
         
         return mark_safe(render_to_string('ckeditor/widget.html', {
             'final_attrs': flatatt(final_attrs),
