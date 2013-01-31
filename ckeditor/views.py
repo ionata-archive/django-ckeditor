@@ -133,14 +133,11 @@ def upload(request):
     for chunk in upload.chunks():
         out.write(chunk)
     out.close()
-    
-    
-    # scale image based on MAX_WIDTH
-#    if getattr(settings, "CKEDITOR_MAX_WIDTH"):
-#        rescale(upload_filename, width=settings.CKEDITOR_MAX_WIDTH)
-    
 
-    thumb_filename = create_thumbnail(upload_filename)
+    try:
+        thumb_filename = create_thumbnail(upload_filename)
+    except IOError:
+        thumb_filename = None
 
     # Respond with Javascript sending ckeditor upload url.
     if thumb_filename and len(thumb_filename) > 0:
