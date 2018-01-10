@@ -1,5 +1,6 @@
 ﻿/*
- Copyright (c) 2003-2013, CKSource - Frederico Knabben. All rights reserved.
- For licensing, see LICENSE.html or http://ckeditor.com/license
+ Copyright (c) 2003-2014, CKSource - Frederico Knabben. All rights reserved.
+ For licensing, see LICENSE.md or http://ckeditor.com/license
 */
-CKEDITOR.plugins.setLang("placeholder","he",{title:"מאפייני שומר מקום",toolbar:"צור שומר מקום",text:"תוכן שומר המקום",edit:"ערוך שומר מקום",textMissing:"שומר המקום חייב להכיל טקסט."});
+CKEDITOR.plugins.setLang("placeholder","he",{title:"מאפייני שומר מקום",toolbar:"צור שומר מקום",name:"Placeholder Name",invalidName:"The placeholder can not be empty and can not contain any of following characters: [, ], <, >",pathName:"placeholder"});
+//@ sourceMappingURL=he.js.map

@@ -1,6 +1,6 @@
 ﻿/*
- Copyright (c) 2003-2013, CKSource - Frederico Knabben. All rights reserved.
- For licensing, see LICENSE.html or http://ckeditor.com/license
+ Copyright (c) 2003-2014, CKSource - Frederico Knabben. All rights reserved.
+ For licensing, see LICENSE.md or http://ckeditor.com/license
 */
 (function(){function b(a,b,c){var k=n[this.id];if(k)for(var f=this instanceof CKEDITOR.ui.dialog.checkbox,e=0;e<k.length;e++){var d=k[e];switch(d.type){case g:if(!a)continue;if(null!==a.getAttribute(d.name)){a=a.getAttribute(d.name);f?this.setValue("true"==a.toLowerCase()):this.setValue(a);return}f&&this.setValue(!!d["default"]);break;case o:if(!a)continue;if(d.name in c){a=c[d.name];f?this.setValue("true"==a.toLowerCase()):this.setValue(a);return}f&&this.setValue(!!d["default"]);break;case i:if(!b)continue;
 if(b.getAttribute(d.name)){a=b.getAttribute(d.name);f?this.setValue("true"==a.toLowerCase()):this.setValue(a);return}f&&this.setValue(!!d["default"])}}}function c(a,b,c){var k=n[this.id];if(k)for(var f=""===this.getValue(),e=this instanceof CKEDITOR.ui.dialog.checkbox,d=0;d<k.length;d++){var h=k[d];switch(h.type){case g:if(!a||"data"==h.name&&b&&!a.hasAttribute("data"))continue;var l=this.getValue();f||e&&l===h["default"]?a.removeAttribute(h.name):a.setAttribute(h.name,l);break;case o:if(!a)continue;
@@ -22,3 +22,4 @@ label:a.lang.common.align,"default":"",style:"width : 100%;",items:[[a.lang.comm
 j&&(i.align=j)}},{type:"html",html:"<div></div>"}]},{type:"fieldset",label:CKEDITOR.tools.htmlEncode(a.lang.flash.flashvars),children:[{type:"vbox",padding:0,children:[{type:"checkbox",id:"menu",label:a.lang.flash.chkMenu,"default":!0,setup:b,commit:c},{type:"checkbox",id:"play",label:a.lang.flash.chkPlay,"default":!0,setup:b,commit:c},{type:"checkbox",id:"loop",label:a.lang.flash.chkLoop,"default":!0,setup:b,commit:c},{type:"checkbox",id:"allowFullScreen",label:a.lang.flash.chkFull,"default":!0,
 setup:b,commit:c}]}]}]},{id:"advanced",label:a.lang.common.advancedTab,elements:[{type:"hbox",children:[{type:"text",id:"id",requiredContent:"object[id]",label:a.lang.common.id,setup:b,commit:c}]},{type:"hbox",widths:["45%","55%"],children:[{type:"text",id:"bgcolor",requiredContent:"embed[bgcolor]",label:a.lang.flash.bgcolor,setup:b,commit:c},{type:"text",id:"class",requiredContent:"embed(cke-xyz)",label:a.lang.common.cssClass,setup:b,commit:c}]},{type:"text",id:"style",requiredContent:"embed{cke-xyz}",
 validate:CKEDITOR.dialog.validate.inlineStyle(a.lang.common.invalidInlineStyle),label:a.lang.common.cssStyle,setup:b,commit:c}]}]}})})();
+//@ sourceMappingURL=flash.js.map
